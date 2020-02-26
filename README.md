@@ -2,10 +2,8 @@
 
 ---
 Title: Introduction to Flexbox<br>
-Type: Morning Exercise <br>
 Duration: "0:45"+<br>
 Creator: Karolin Rafalski<br>
-    Course: SEIR-Avocado-Toast<br>
 Competencies: CSS, Flexbox<br>
 Prerequisites: HTML, CSS basics<br>
 
