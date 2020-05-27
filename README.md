@@ -287,7 +287,7 @@ Sometimes we do want our cards to be different widths. Unlike the default which 
 }
 ```
 
-- This will get grow the selected cards out proportionally, but if there is not enough space, it will allow for the items to grow but not overflow their container
+- This will grow the selected cards out proportionally, but if there is not enough space, it will allow for the items to grow but not overflow their container
 
 #### Flex-order
 You can also change the order of the flex items. Let's say we want our `selected` cards to be featured on the left
