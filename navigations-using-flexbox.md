@@ -19,7 +19,7 @@ Before we add any code let's think about the organization of the content and the
 
 As we all know Flexbox has a great property to do just that: `justify-content:space-between`
 
-<img src="https://i.imgur.com/TtOoaV9.png" />
+<img src="https://i.imgur.com/JyIEzWQ.png" />
 
 In order to work through the actual elements we should use try and answer the following questions:
 
