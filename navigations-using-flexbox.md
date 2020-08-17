@@ -216,7 +216,7 @@ Then we can update our HTML to include an image tag and add the image there.  We
 ```
 <img src="https://i.imgur.com/UgUVkpP.png" >
 
-And the css for title.
+And the css for title.  
 
 ```css
 li.title img {
@@ -224,6 +224,8 @@ li.title img {
   display: flex;
 }
 ```
+This is an example of turning flexbox on an element that is already a flexbox child. 
+
 
 <img src="https://i.imgur.com/ipoFmt9.png" />
 
@@ -231,10 +233,10 @@ li.title img {
 
 The search bar could use a few tweaks.  Although we won't aim to match it exactly like Instagram as that would involve a few new topics that require a much more in depth discussion let's clean it up.
 
-First let's add flexbox to the form.  This is an example of turning flexbox on an element that is already a flexbox child. 
+First let's add flexbox to the form.  This is another example of turning flexbox on an element that is already a flexbox child. 
 
 ```css
-form {
+li.search form {
   display: flex;
   align-items: center;
 }
@@ -243,7 +245,7 @@ form {
 And now for the input.
 
 ```css
-input {
+li.search input {
    height: 20px;
    margin-right: 5px;
    font-size: 16px;
