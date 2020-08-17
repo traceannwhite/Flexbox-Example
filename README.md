@@ -2,30 +2,29 @@
 
 ---
 Title: Introduction to Flexbox<br>
-Duration: "0:45"+<br>
-Creator: Karolin Rafalski<br>
+Duration: "60min"+<br>
 Competencies: CSS, Flexbox<br>
 Prerequisites: HTML, CSS basics<br>
 
 ---
 
-
-
-# Flexbox
-![Flexbox logo](https://i.ytimg.com/vi/JVYVDpdvdMo/maxresdefault.jpg)
-
-
-
+<img src="https://i.ytimg.com/vi/JVYVDpdvdMo/maxresdefault.jpg" width=500/>
 
 ## Intro
 
 ### A Very Brief History
-Once upon a time, monitors were square and monochrome. As display technology advanced, monitors got bigger, more colorful, and wider. Browser technology also improved, allowing browsers to be resized to nearly any size the monitor would allow. Finally, mobile devices came on the market, providing not only new sizes and proportions but also for the display to rotate and change orientation. This provided new challenges for layouts with CSS.
+Flexbox was introduced as part of CSS3 and it's been around since ~2008. Despite being a technology that has been around for nearly 12 years, it lacked consistent browser support (until recently) and thus developers have often had to fall back on some of the following older layout approaches:
 
-Flexbox was introduced as part of CSS3, it has been around since ~2008. Despite being a technology that has been around for nearly ten years, it lacked consistent browser support (until recently) and thus developers have often had to fall back on floats and relative positioning to solve the kind of layout challenges that flexbox was built to solve.
+- changing and elements `display` property from `inline` to `block`
+- using the `float` or `position` property to take an element out of the document flow
 
-### Can I use flexbox?
-Flexbox, currently has near universal support from all major modern browsers. You can find out what browsers support by going to [caniuse.com](http://caniuse.com/) , this website also documents support for just about anything else you might want to put in the browser, inclulding HTML and JavaScript. If you are wondering if you should be using `vendor prefixes` (looks like the code below) and how to write them, a great resourse is [shouldiprefix](http://shouldiprefix.com/):
+[Basics & Terminology Of Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
+#### Can I use flexbox?
+Flexbox, currently has near universal support from all major modern browsers. You can find out what browsers support by going to [caniuse.com](http://caniuse.com/) , this website also documents support for just about anything else you might want to put in the browser, inclulding HTML and JavaScript. 
+
+#### Vendor Prefixes
+If you are wondering if you should be using `vendor prefixes` (looks like the code below) and how to write them, a great resourse is [shouldiprefix](http://shouldiprefix.com/):
 
 ```
 .page-wrap {
@@ -36,26 +35,28 @@ Flexbox, currently has near universal support from all major modern browsers. Yo
 }
 ```
 
-In this course we are only worrying about modern browsers (we don't worry about supporting any version of IE, and currently Safari is in version 10.1+, so you would only need the vendor prefixes above **IF** you needed to support older browsers).
 
-TLDR; - we don't need to write any vendor prefixes for flexbox for this lesson because everything we are going to do is supported by Chrome.
+In SEIR we are only worrying about modern browsers and won't be including vendor prefixes in our CSS but we want that you are aware they exist and their purpose. 
+
 
 ### Flexbox is its own thing
-Flexbox is built with its own logic, seperate from floats and other layout properties. Rather than noodling around with numbers, flexbox properties are more descriptive like `justify-content: space-between;` or `flex-direction: column;` with the spacing and resizing being calculated under the hood for you. This resizing happens live on browser resizing or even rotating a mobile device. See the section [Basics & Terminology](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+Flexbox is built with its own logic. Flexbox properties are more descriptive like `justify-content: space-between;` or `flex-direction: column;` with the spacing and resizing being calculated under the hood. 
 
-Flexbox has just two types of elements. Parent, or better known as `flex container` elements and children, or better known as `flex items`. Each have their own properties.
+Flexbox has just two types of elements, each of which have their own properties.
 
-
+- `flex container` - `parent`
+- `flex items` - `children`
 
 ### Use Case for Flexbox
-One great use case for flexbox is a layout pattern that is often reffered to as `cards`. Cards are often used for online shopping.
+One great use case for flexbox is a layout pattern that is often referred to as `cards`. Cards are often used for online shopping.  Here the cards respond to either a `Wide` or` Narrow` viewport
 
+**Wide**
 
-Wide:
-![cards in online shopping cole haan large example](https://i.imgur.com/56uik0T.png)
+<img src="https://i.imgur.com/56uik0T.png" width=500/>
 
-Narrow:
-![cards in online shopping cole haan small example](https://i.imgur.com/LwYtndU.png)
+**Narrow**
+
+<img src="https://i.imgur.com/LwYtndU.png" width=500/>
 
 Here are some commonly desired layout patterns:
 - even spacing between cards
@@ -65,8 +66,8 @@ Here are some commonly desired layout patterns:
 
 ### What We Are Building Today
 We will be building cards that just have a single letter on them. As we build we will learn about some properties of Flexbox and their behavoirs.
-![Final build](https://i.imgur.com/TFc73Sf.png)
 
+<img src="https://i.imgur.com/TFc73Sf.png" width=500/>
 
 
 ### Getting Started
@@ -81,20 +82,78 @@ We will be building cards that just have a single letter on them. As we build we
 	- `starter.css` - a little bit of css to get us started - it is already set up for you
 	- `main.css` - this is the **ONLY** file that you will be coding in for this morning's exercise
 
-- `open index.html` to open the file in your browser. It should look like this:
-- ![stater index.html apperance](https://i.imgur.com/A6nxcmv.png)
-- The buttons should add and remove a letter `card`
-- open the `main.css` file that you will be coding in.
-- Set up your workflow. Set up all the different windows you will be working in, in a way that helps you have a smooth work flow, so you are limiting the amount you have to minimize and resize your work and you can instead just focus on coding. Here is my layout for this lesson. Different layouts will work with different lessons. But always take a minute to try to find a good workflow. ![Karolin's workflow](https://i.imgur.com/gsk0jCz.png)
+Open `index.html` in your browser and it should look like this and the buttons should add and remove a letter `card`
+
+<img src="https://i.imgur.com/A6nxcmv.png" width=500/>
+
+### Getting Started
+
+Open the `main.css` file that as we will be writing all our CSS there. 
+
+#### Workflow
+
+Set up all the different windows you will be working in, in a way that helps you have a smooth work flow, so you are limiting the amount you have to minimize and resize your work and you can instead just focus on coding. 
+
+Here is my layout for this lesson. Different layouts will work with different lessons. But always take a minute to try to find a good workflow. 
+
+
+<img src="https://i.imgur.com/gsk0jCz.png" width=500/>
+
+#### Flexbox Axes
+
+Flexbox is one dimensional in that it either applies to elements in a `row` or `column`.  If working on a `row` the `main axis` is horizontal however if set to `column` the `main axis` will be vertical.  
+
+<img src="https://i.imgur.com/8vyhPm1.png" width=500/>
+
+#### Flexbox Playground
+
+During the lesson we will use [Flexbox Playground](https://codepen.io/jkeohan/live/zdKJOY) to explore the flexbox settings and their effect. 
 
 #### Flexing the cards
-- Let's add a border to all of our elements so we can see their sizes and layouts. Add the following to the `main.css` file:
-- `* { border: 1px solid gold}`
-- As we add cards (using the `+` button on the `index.html` page), we can see that they are being added as block elements
-- Let's open up Chrome Dev Tools, so we can see where the cards are being added and their html
-- The letters are inside of a div that has a class of `card`
-- The `card` divs are inside a div with a class of `flex-container`
-- Let's make the cards flex items by adding the following code:
+
+Let's add a border to all of our elements so we can see their sizes and layouts. Add the following to the `main.css` file:
+
+```css
+* { border: 1px solid gold}
+```
+
+Let's open up Chrome Dev Tools, so we can see where the cards are being added and their html.
+
+Adding a few cards using the `+`. 
+
+<img src="https://i.imgur.com/eoarfgP.png" width=200/>
+
+Examine those elements in DevTools and you will see that they have a display set to block
+
+<img src='https://i.imgur.com/tkZmYsG.png' />
+
+The letters are inside of a div that has a class of `card` and the `card` divs are inside a div with a class of `flex-container`
+
+You have already been exposed to the display property and that elements are assigned a default value of either `inline` or `block` by default.  Another value that we can assign to the display property is `flex`. 
+
+The main properties that are specific to the to the `flex` parent are:
+
+| Property | What's It Do? | Examples |
+|----------|---------------|----------|
+| display | Turns on flexbox              | `flex`   |
+| flex-direction| Sets the directional flow of flex items | `row`, `column` |
+| justify-content | Align along main axis | `center`, `space-between`, `space-around` |
+| align-items | Align along cross-axis | `flex-start`, `center` |
+| flex-wrap | Wraps elements to the next line | `wrap`, `wrap-reverse` |
+
+<!-- The main properties that are specific to the to the `flex` children  are:
+
+| Property | What's It Do? | Examples |
+|----------|---------------|----------|
+| flex-basis | Sets the default size of the element | `px`, `%`, `em` |
+| flex-grow |  Item will grow  | 1, 2|
+| flex-shrink | Item will shrink | 1, 2|
+| order | The order in which they appear | 1, -1|
+ -->
+
+
+#### Turning On Flexbox
+Let's make the cards flex items by adding the following code:
 
 ```
 .flex-container {
@@ -102,12 +161,18 @@ We will be building cards that just have a single letter on them. As we build we
   background-color: #e9ece5;
 }
 ```
-- The cards now should all add onto one row
+
+The cards now should all add onto one row.
+
+<img src="https://i.imgur.com/KjJusH4.png" width=400/>
+
 
 #### Styling the cards
-- Right now our letters look like plain text, let's make them look more like cards
-- We'll change the color of the text, the background, and give some padding and margins, lastly we'll center the letter in the card
--
+
+Right now our letters look like plain text, let's make them look more like cards. 
+
+We'll change the color of the text, the background, and give some padding and margins, lastly we'll center the letter in the card
+
 ```
 .card {
   color: white;
@@ -117,9 +182,13 @@ We will be building cards that just have a single letter on them. As we build we
 }
 ```
 
+<img src="https://i.imgur.com/SotraXD.png" width=400/>
+
 #### Styling the flex container
-- The flex-container can have any regular properties or it can be a flex item of another container. In our case, its relation to its parent element is non-flex.
-- It would be nice if the container was a little narrower than the `header` and would stay centered on resizing. We can achieve this by adding:
+
+The flex-container can have any regular properties or it can be a flex item of another container. In our case, its relation to its parent element is non-flex.
+
+It would be nice if the container was a little narrower than the `header` and would stay centered on resizing. We can achieve this by adding:
 
 ```
 .flex-container {
@@ -129,13 +198,19 @@ We will be building cards that just have a single letter on them. As we build we
   margin: auto;
 }
 ```
-expected apperance:
-![dd](https://i.imgur.com/HFKeM1i.png)
 
 
 
-- we can see that our cards can move outside of the parent container causing an unexpected and unappealing look
-- By default, flex items only stay on one row. In this case it is possible for them to overflow their container. We can make it look better by making the overflow `hidden` which will not allow the user to see the overflow or allowing the user to `scroll` the overflow content. Let's scroll!
+<img src="https://i.imgur.com/pEEWZBS.png" width=400/>
+
+If we decrease the width we can see that our cards can move outside of the parent container causing an unexpected and unappealing look
+
+<img src="https://i.imgur.com/8IUBvqs.png" width=400/>
+
+
+By default, flex items only stay on one row. In this case it is possible for them to overflow their container. 
+
+We can make it look better by making the overflow `hidden` which will not allow the user to see the overflow or `scroll` to allow the user to scroll to the content. 
 
 
 ```
@@ -162,14 +237,19 @@ expected apperance:
 }
 ```
 
+<img src="https://i.imgur.com/j1H4VhV.png" width=300/>
+
 **Bonus:** `flex-wrap` can have a value of `wrap-reverse` how does that orient the cards?
 
 #### Flex-basis
 
-Something looks off, instead of neat rows and columns, we seem to have a bit of a skew from row to row:
-![](https://i.imgur.com/SSAhahH.png)
+Something looks off, instead of neat rows and columns, we seem to have a bit of a skew from row to row and between elements.
 
-- By default, Flex items grow to fit their content and no more. These letters all have different widths (quick compare: `H`, `I`, `J`), sometimes, this look is desirable. In our case it isn't. Let's set the minimum width using flexbox's `flex-basis` property
+<img src="https://i.imgur.com/SSAhahH.png" width=300/>
+
+By default, Flex items grow to fit their content and no more. These letters all have different widths (quick compare: `H`, `I`, `J`), sometimes, this look is desirable however in our case it isn't. 
+
+Let's set the minimum width using flexbox's `flex-basis` property
 
 ```
 .card {
@@ -181,7 +261,9 @@ Something looks off, instead of neat rows and columns, we seem to have a bit of 
 }
 ```
 
-- Yay! But wait! now our letters are off to the left and no longer centered! Let's fix that using the `text-align:center;` property
+<img src="https://i.imgur.com/NMFiLFR.png" width=300/>
+
+Yay! But wait! now our letters are off to the left and no longer centered! Let's fix that using the `text-align:center;` property
 
 ```
 .card {
@@ -192,9 +274,10 @@ Something looks off, instead of neat rows and columns, we seem to have a bit of 
   flex-basis: 1em;
   text-align: center;
 }
-
 ```
-- Now that we are set with sizing, let's comment out or remove our gold borders rule
+
+<img src="https://i.imgur.com/81dqnuN.png" width=300/>
+
 
 #### Flex-direction
 By default, the `flex-direction` is `row`, but we can play around with the order of our `flex-items` by changing the `flex-direction` property of the `flex-container`
@@ -213,13 +296,16 @@ Note: we will need to add a `height` in order to see multiple columns
 }
 ```
 
+<img src="https://i.imgur.com/xsYH5z5.png" width=300/>
+
 That was fun, but not quite what we want, so let's set flex-direction back to `row` and remove the height property.
 
 #### Justify Content
 The `justify-content` property is jam packed with great responsive layout options.
 
-- Right now, as we add cards, they add from left to right. But we have other really nice options
-- Let's start with center:
+Right now, as we add cards, they add from left to right. But we have other really nice options
+
+Let's start with center:
 
 ```
 .flex-container {
@@ -229,29 +315,34 @@ The `justify-content` property is jam packed with great responsive layout option
   margin: auto;
   overflow: scroll;
   flex-wrap: wrap;
-  flex-direction: column;
-  height: 400px;
   justify-content: center;
 }
 ```
-- Take a moment to play around with it, it adds a single centered card and then with each card moves them outwards until the row is full, and then wraps into the next row, where the centering begins again.
 
-Center:
-![](https://i.imgur.com/WFQl4Sz.png)
+Take a moment to play around with it, it adds a single centered card and then with each card moves them outwards until the row is full, and then wraps into the next row, where the centering begins again.
 
-- Right now the elements are clustered in the middle. What if we wanted them centered, but just have ... more space around?
-- Flexbox has a `space-around` property! Let's give it a whirl
+**Center:**
+
+
+<img src="https://i.imgur.com/IHuSg90.png" width=300/>
+
+Right now the elements are clustered in the middle. What if we wanted them centered, but just have ... more space around?
+
+Flexbox has a `space-around` property! Let's give it a whirl
 
 Space-around:
-![](https://i.imgur.com/s3InQM7.png)
 
-- Ok! That's cool, but what if you want the start and end to align with the edges and then any additional elements to have even space between?
-- Yes flexbox can! With the `space-between` property
+<img src="https://i.imgur.com/kk4lkrD.png" width=300/>
 
-Space-between:
-![](https://i.imgur.com/TSCzomg.png)
+Ok! That's cool, but what if you want the start and end to align with the edges and then any additional elements to have even space between?
 
-**Bonus:** read https://css-tricks.com/fighting-the-space-between-inline-block-elements/ - one of the best articles on how to work through challenging css problems.
+Yes flexbox can! With the `space-between` property
+
+
+
+<img src="https://i.imgur.com/WGdsDeE.png" width=300/>
+
+<br>
 
 
 #### Vertical Centering
@@ -287,7 +378,7 @@ Sometimes we do want our cards to be different widths. Unlike the default which 
 }
 ```
 
-- This will grow the selected cards out proportionally, but if there is not enough space, it will allow for the items to grow but not overflow their container
+This will grow the selected cards out proportionally, but if there is not enough space, it will allow for the items to grow but not overflow their container
 
 #### Flex-order
 You can also change the order of the flex items. Let's say we want our `selected` cards to be featured on the left
@@ -309,13 +400,8 @@ Flexbox's intuitive design and descriptive properties are both powerful and easy
 
 There are a handful of things this lesson did not cover. Below is the CSS-Tricks `A Complete Guide` - indeed, it is complete and quite short which is a beautiful reflection of the elegance and utility of flexbox.
 
-#### References
+#### Resources
 
-CSS-Tricks: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+- CSS-Tricks: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+- Flexplorer: http://bennettfeely.com/flexplorer/
 
-Flexplorer: http://bennettfeely.com/flexplorer/
-
-#### Hungry for More (choose any):
-- Read the three articles in this README.md
-- Continue to experiment with flexbox properties and update the cards to something that suits your taste
-- Check out Flexbox's other great solves like sticky footer: https://philipwalton.github.io/solved-by-flexbox/
