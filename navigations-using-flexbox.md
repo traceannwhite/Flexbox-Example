@@ -1,11 +1,14 @@
----
+![](/ga_cog.png)
 
+---
 Title: Flexbox For Navigation<br>
 Duration: "60min"+<br>
 Competencies: CSS, Flexbox<br>
-Prerequisites: HTML, Basic Flexbox<br>
+Prerequisites: HTML, CSS basics<br>
 
 ---
+
+<img src="https://i.ytimg.com/vi/JVYVDpdvdMo/maxresdefault.jpg" width=500/>
 
 ### Flexbox For Navigation
 
