@@ -1,3 +1,11 @@
+---
+Title: Flexbox For Navigation<br>
+Duration: "60min"+<br>
+Competencies: CSS, Flexbox<br>
+Prerequisites: HTML, Basic Flexbox<br>
+
+---
+
 ### Flexbox For Navigation
 
 When building a web site it's important to distinguish layout from content.  Layout is used to design the overall structure of the site and of course content is then added to those structural elements.  Technologies such as CSS Grid or a front end framework like Bootstrap are often used implement the layout design and Flexbox used for content 
