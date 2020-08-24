@@ -289,4 +289,4 @@ Now that looks pretty nice so congrats on creating your first official nav rebui
 
 ### References
 
-- [the-most-popular-navigation-bars-created-with-flexbox](https://medium.com/flexbox-and-grids/the-most-popular-navigation-bars-created-with-flexbox-6c0f59f55686)
+- [The Most Popular Nav Bars Created With Flexbox](https://medium.com/flexbox-and-grids/the-most-popular-navigation-bars-created-with-flexbox-6c0f59f55686)
