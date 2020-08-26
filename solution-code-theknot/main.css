@@ -3,7 +3,7 @@
 }
 
 nav.ListContainer {
-	max-width: 800px;
+	max-width: 900px;
 	margin: 0 auto;
 }
 
@@ -16,11 +16,14 @@ nav.ListContainer ul {
 li.ItemContainer {
   flex: 1 0 185px;
   max-width: 195px;
-	/* 
-  flex: 1 0 185px; */
-  /* max-width: 195px;
-	flex:1 0 185px;
-	padding: 20px; */
   text-align: center;
   padding:20px;
+}
+
+.ListContainer li:first-of-type {
+	order: 1;
+}
+
+.ListContainer li:nth-of-type(2) {
+	order: 2;
 }
