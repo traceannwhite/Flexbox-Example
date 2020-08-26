@@ -1,0 +1,26 @@
+* {
+	/* border: 1px solid !important; */
+}
+
+nav.ListContainer {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+nav.ListContainer ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+li.ItemContainer {
+  flex: 1 0 185px;
+  max-width: 195px;
+	/* 
+  flex: 1 0 185px; */
+  /* max-width: 195px;
+	flex:1 0 185px;
+	padding: 20px; */
+  text-align: center;
+  padding:20px;
+}
