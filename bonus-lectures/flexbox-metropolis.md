@@ -10,6 +10,19 @@ Prerequisites: HTML, CSS basics<br>
 
 <img src="https://i.ytimg.com/vi/JVYVDpdvdMo/maxresdefault.jpg" width=500/>
 
+## Prerequisites
+
+- Familiarity with display property values such as: block, inline, inline-block
+
+## Objectives
+
+By the end of this you should be able to:
+
+- Know when and where to apply flexbox
+- What flexbox properties are available to a flexbox container
+- What flexbox properties are available to a flexbox child element
+- Implement a nav element using flexbox
+
 ## Intro
 
 ### A Very Brief History
@@ -402,6 +415,7 @@ There are a handful of things this lesson did not cover. Below is the CSS-Tricks
 
 #### Resources
 
-- CSS-Tricks: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-- Flexplorer: http://bennettfeely.com/flexplorer/
+- [CSS-Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [Flexplorer](http://bennettfeely.com/flexplorer/)
+- [Understanding Flexbox](https://github.com/ohansemmanuel/Understanding-Flexbox/tree/master/08.%20Building%20a%20Music%20app%20Layout%20with%20Flexbox)
 
