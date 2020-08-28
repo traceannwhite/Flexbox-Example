@@ -91,15 +91,15 @@ One site that represents a modern layout and is a beautifully desinged is [The K
 
 ### What We Are Building Today
 
-Below is our attempt at redesigning the services section of The Knot and what we will focus on building today. We will be using Flexbox to position the elements, define their widths as well as add some responsiveness.
+Below is our attempt at redesigning the services section of The Knot and what we will focus on building today. We will be using Flexbox to position the elements, define their widths as well as leverage wrapping to create the responsive design we need to implement. 
 
-The desktop version would be displayed as 2 rows and 4 columns.
+Here the desktop version is displayed as 2 rows and 4 columns.
 
-<img src="https://i.imgur.com/KqObq8S.png" width=600/>
+<img src="https://i.imgur.com/WJgWKuE.png" width=600/>
 
-The responsive versions will work for mobile and tablet.
+The responsive versions will adjust as needed. 
 
-<img src="https://i.imgur.com/kWSxtU4.png" width=600/>
+<img src="https://i.imgur.com/TRX3MrM.png" width=700/>
 
 ### Getting Started
 
@@ -108,27 +108,19 @@ The responsive versions will work for mobile and tablet.
 - Navigate to the starter-code-theknot directory
 - Inside we will find the following - `index.html` - it is already set up for you - `default.css` - a little bit of css to get us started - it is already set up for you - `main.css` - this is the **ONLY** file that you will be coding in for this morning's exercise
 
-Open `index.html` in your browser and it should look like below.
-
-<img src="" width=500/>
 
 #### Examine The HTML
 
-Let's take a moment to examine the `index.html` file. In the `head` we will see some additional css being imported for [Font Awesome](). It's and online library that provides many free icons.
+Let's take a moment to examine the `index.html` file. In the `head` we will see some additional css being imported for [Font Awesome](). It's and online library that provides all of the free icons were using in today's design.  It also provide many more free icons that should meet most of our needs during this early stage of learning front end  web development. 
 
 ```html
 <!-- FONT AWESOME -->
-<link
-	rel="stylesheet"
-	href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-/>
-<link
-	rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 ```
 
-Then links to our css. For this codealong we will only be editing `main.css.`
+##### Main.css
+Then links to our css. For this lesson we will only be editing `main.css.` however you are encouraged to examine the `default.css` file as it contains additional settings that we don't have time to cover in depth. 
 
 ```html
 <!-- OUR CSS -->
@@ -136,7 +128,8 @@ Then links to our css. For this codealong we will only be editing `main.css.`
 <link rel="stylesheet" href="main.css" />
 ```
 
-The main section that contains the `nav > ul > li` elements.
+#### ListContainer 
+The `.ListContainer` section contains the `nav > ul > li` elements that make up the design.
 
 ```html
 <nav class="ListContainer">
@@ -158,24 +151,18 @@ The main section that contains the `nav > ul > li` elements.
 
 ### Getting Started
 
-Open the `main.css` file that as we will be writing all our CSS there.
 
-By default HTML applies some default CSS which we can clearly see being represented here as the `dot` and spacing between the elements.
+Open `index.html` in your browser and it should look like below.
 
-<img src="https://i.imgur.com/g1FVOz9.png" width=500/>
+<img src="https://i.imgur.com/z95ud3m.png" width=400/>
 
+By default HTML applies some default CSS which we can clearly see being represented here as the `dot` and spacing between the elements. There are times when front end devs want to start with a clean slate and so they have to manually add CSS that removes the defaults being applied. 
 
-
-There are times when front end devs want to start with a clean slate and so they add CSS that removes the defaults being applied. Lucky for us there is a css library that does that for us already, it's called `reset.css`
-
-Let's add the following link tag to the head.
+Lucky for us there is a css library that does that for us already, it's called `reset.css` and will add that to our `head`
 
 ```html
 <!-- RESET CSS -->
-<link
-	rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
-/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"/>
 ```
 
 Once applied we should see the HTML updated to be the following.
@@ -184,7 +171,9 @@ Once applied we should see the HTML updated to be the following.
 
 #### Borders...Borders...Borders..
 
-Before we define any additional CSS settings let's turn on borders for all elements so we can clearly see their dimensions.
+Open the `main.css` file.  As you can see it's a blank slate.  This is where we will be writing all our CSS.
+
+Before we define any CSS settings specific to the design, let's turn on borders for all elements so we can clearly see their dimensions.
 
 ```
 * {
@@ -200,6 +189,7 @@ Hmmm...why didn't that apply? Any ideas?...
 
 - Take a moment to examine the elements in DevTools
 - Review both the `Styles` and `Computed` tabs and see if they provide any insight.
+- When asked slack your response in a thread created by the instructor
 
 <hr>
 
@@ -242,7 +232,7 @@ The main properties that are specific to the to the `flex` parent are:
 
 #### The Flex Container
 
-Let's make the li's flex items by adding the following code.
+Let's make the ul a flex container by adding the following code.
 
 ```css
 nav.ListContainer ul {
@@ -250,7 +240,7 @@ nav.ListContainer ul {
 }
 ```
 
-Now the elements are aligned horizontally.
+This will horizontally align the elements. 
 
 <img src="https://i.imgur.com/woSXdGI.png" width=800/>
 
@@ -265,13 +255,13 @@ nav.ListContainer ul{
 }
 ```
 
-The elements do indeed wrap around now leaving free space in the ul.
+The elements expanded in width and have now started to wrap around to the next row leaving free space to the right of the ul. 
 
 <img src="https://i.imgur.com/0XnhLUK.png" width=500/>
 
 #### Space Around
 
-Let's also take advantage of that free space on the right and divy it on all sides of the li's using `justify-content:around`
+Let's take advantage of that free space on the right and divy it on all sides of the li's using `justify-content:around`
 
 ```css
 nav.ListContainer ul {
@@ -285,7 +275,7 @@ nav.ListContainer ul {
 
 #### The Flex Children
 
-The main properties that are specific to `flex` children are:
+Here are the main properties that are specific to `flex` children:
 
 | Property    | What's It Do?                                       | Examples                     |
 | ----------- | --------------------------------------------------- | ---------------------------- |
@@ -296,7 +286,7 @@ The main properties that are specific to `flex` children are:
 | align-self  | Default alignment                                   | `align-self:center`          |
 | order  | Reorder the elements                                | `order:1`          |
 
-For this design each li will have a defined width. Let's use the `flex` shorthand property.
+For this design each li will have a defined width so let's see what the the `flex` shorthand property will do for us. 
 
 ```css
 li.ItemContainer {
@@ -304,9 +294,12 @@ li.ItemContainer {
 }
 ```
 
+This property is a combination of `flex-grow`, `flex-shrink`, `flex-basis`.  By default the elements will only expand to fit their content, hence the grow.  `Flex-basis` provides a way to define a starting width for the elements before any available free space is divided up. 
+
+
 <img src="https://i.imgur.com/4dr734f.png" width=500/>
 
-It almost seems like were back to the original layout. If we include flex-grow and flex-basis we can get closer to the design.
+If we include `flex-shrink` and `flex-basis` we can get closer to the design.
 
 ```css
 li.ItemContainer {
@@ -314,13 +307,19 @@ li.ItemContainer {
 }
 ```
 
+`Flex-basis` states that the elements must be a min width of `185px` but can grow if there is any additional space available. 
+
 <img src="https://i.imgur.com/suEtHkd.png" width=500/>
 
-It looks good however if we `decrease` the width of the page we can see that the last 2 elements increase in width.
+#### Max-Width
+
+It looks good however if we `decrease` the width of the page we can see that the last 2 elements increase in width thanks to `flex-basis`.  
+
+Sometimes thats what you want, and it's good to know that this is a possibility, however that doesn't fit our design.
 
 <img src="https://i.imgur.com/DHfrbFa.png" width=500/>
 
-Sometimes thats what you want and it's good to know that this is a possibility however that doesn't fit our design so let's constrain the width of the elements and assign a `max-width`.
+ So let's constrain the width of the elements and assign a `max-width`.
 
 ```css
 li.ItemContainer {
@@ -329,13 +328,16 @@ li.ItemContainer {
 }
 ```
 
+#### Remove Borders
 Were almost at our final design. Let's remove the borders and see where we stand.
 
 <img src="https://i.imgur.com/VhKBva3.png" width=500/>
 
+So it seems like the elements lost some space vertically between them.  This is due to borders providing a boundary for the elements.  Since we have removed that boundary they are now much closer. 
+
 #### Margin or Padding
 
-So it seems like the elements lost some space vertically between them. could use some space between them in all directions. Margin is usually the way to go so let's try that.
+So let's create space between the elements on all sides. Margin is usually the way to go when elements want to push away from something so let's try adding margin.
 
 ```css
 li.ItemContainer {
@@ -347,9 +349,9 @@ li.ItemContainer {
 
 <img src="https://i.imgur.com/XPyMklL.png" width=500/>
 
-Although this creates space we no longer have the items display in 2 rows with 4 elements per row. That is because margin adds to the space occupied by the element but flexbox doesn't take margin into consideration.
+Although this creates space wanted we no longer have the items display in 2 rows with 4 elements per row. That is because margin adds to the space occupied by the element and flexbox doesn't take margin into consideration.
 
-Another option to create the illusion of space is to remote margin and add padding.
+Another option to create the illusion of space is to remove margin and add padding.
 
 ```css
 li.ItemContainer {
