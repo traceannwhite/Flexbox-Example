@@ -3,6 +3,7 @@
 ---
 
 Title: Introduction to Flexbox<br>
+Author: Joe Keohan<br>
 Duration: "60min"+<br>
 Competencies: CSS, Flexbox<br>
 Prerequisites: HTML, CSS basics<br>
