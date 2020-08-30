@@ -4,7 +4,7 @@
 
 Title: Introduction to Flexbox<br>
 Author: Joe Keohan<br>
-Duration: "60min"+<br>
+Duration: 60min+<br>
 Competencies: CSS, Flexbox<br>
 Prerequisites: HTML, CSS basics<br>
 
@@ -406,3 +406,8 @@ Let's now move `Wedding Websites` to the end as well.  For that we need to targe
 ```
 
 <img src="https://i.imgur.com/4cmGi3i.png" width=500/>
+
+### Resources
+
+- [Basics & Terminology Of Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [The Most Popular Nav Bars Created With Flexbox](https://medium.com/flexbox-and-grids/the-most-popular-navigation-bars-created-with-flexbox-6c0f59f55686)
