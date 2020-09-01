@@ -166,9 +166,21 @@ The `.ListContainer` section contains the `nav > ul > li` elements that make up 
 
 Open `index.html` in your browser and it should look like below.
 
-<img src="https://i.imgur.com/z95ud3m.png" width=400/>
+<img src="https://i.imgur.com/KVXcYLe.png" width=400/>
 
 By default HTML applies some default CSS which we can clearly see being represented here as the `dot` and spacing between the elements. There are times when front end devs want to start with a clean slate and so they have to manually add CSS that removes the defaults being applied. 
+
+
+<hr>
+
+#### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - 2min
+
+- Take a moment to examine the elements in DevTools
+- Determine what property is being used to center the elements contents
+- When asked slack your response in a thread created by the instructor
+
+<hr>
+
 
 Lucky for us there is a css library that does that for us already, it's called `reset.css` and will add that to our `head`
 
@@ -179,7 +191,7 @@ Lucky for us there is a css library that does that for us already, it's called `
 
 Once applied we should see the HTML updated to be the following.
 
-<img src="https://i.imgur.com/ABt6lms.png" width=500/>
+<img src="https://i.imgur.com/1TxmIWd.png" width=500/>
 
 #### Borders...Borders...Borders..
 
@@ -215,7 +227,7 @@ We can fix this by adding the `!important` flag to make this setting take preced
 }
 ```
 
-<img src="https://i.imgur.com/Trk3pkT.png" width=500/>
+<img src="https://i.imgur.com/iihi35C.png" width=500/>
 
 #### Center The Nav
 
@@ -254,7 +266,7 @@ nav.ListContainer ul {
 
 This will horizontally align the elements. 
 
-<img src="https://i.imgur.com/woSXdGI.png" width=800/>
+<img src="https://i.imgur.com/J4lz2Be.png" width=800/>
 
 #### Flex Wrap
 
