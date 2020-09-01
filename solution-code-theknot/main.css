@@ -20,10 +20,10 @@ li.ItemContainer {
   padding:20px;
 }
 
-.ListContainer li:first-of-type {
+/* .ListContainer li:first-of-type {
 	order: 1;
 }
 
 .ListContainer li:nth-of-type(2) {
 	order: 2;
-}
+} */
