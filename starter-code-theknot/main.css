@@ -1,5 +1,5 @@
 * {
-    border: 1px solid !important;
+    /* border: 1px solid !important; */
 }
 
 /* ul,li, p, h4 {
@@ -15,35 +15,34 @@ nav.ListContainer {
 
 /* FLEX PARENT => display:flex */
 nav.ListContainer ul {
-    /* display:flex; */
-    /* flex-wrap: wrap;
-    justify-content: space-around; */
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     
 }
 
 /* FLEX CHILDREN */
 li.ItemContainer {
-    /* flex:1 0 185px;
+    flex:1 0 185px;
     max-width:185px;
     padding:20px;
-    */
      text-align:center;
 }
 
 /* the space in the rule represents a child element */
 nav.ListContainer li:first-of-type  {
-    /* order: 1; */
+    order: 1;
 }
 
 nav.ListContainer li:nth-of-type(2) {
-    /* order: 2; */
+    order: 2;
 }
 
 nav.ListContainer li:last-of-type {
     /* order: 1; */
 }
 
-
+/* Optent to use  text-align:center instead of nested flexbox*/
 /* li .ItemContentContainer {
     display:flex;
     flex-direction:column;
