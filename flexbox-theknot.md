@@ -168,9 +168,6 @@ Open `index.html` in your browser and it should look like below.
 
 <img src="https://i.imgur.com/KVXcYLe.png" width=400/>
 
-By default HTML applies some default CSS which we can clearly see being represented here as the `dot` and spacing between the elements. There are times when front end devs want to start with a clean slate and so they have to manually add CSS that removes the defaults being applied. 
-
-
 <hr>
 
 #### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - 2min
@@ -181,6 +178,7 @@ By default HTML applies some default CSS which we can clearly see being represen
 
 <hr>
 
+By default HTML applies some default CSS which we can clearly see being represented here as the `dot` and spacing between the elements. There are times when front end devs want to start with a clean slate and so they have to manually add CSS that removes the defaults being applied. 
 
 Lucky for us there is a css library that does that for us already, it's called `reset.css` and will add that to our `head`
 

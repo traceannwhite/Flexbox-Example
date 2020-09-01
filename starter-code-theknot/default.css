@@ -24,6 +24,11 @@ li .ItemHeading {
 	font-size: 0.7em;
 }
 
+li.ItemContainer {
+    /* text-align:center; */
+}
+
+
 .ListContainer a {
 	text-decoration: none;
 	border: none;
