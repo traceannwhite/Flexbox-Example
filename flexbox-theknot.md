@@ -31,10 +31,14 @@ By the end of this you should be able to:
 
 Flexbox was introduced as part of CSS3 and it's been around since ~2008. Despite being a technology that has been around for nearly 12 years, it lacked consistent browser support (until recently) and thus developers have often had to fall back on some of the following older layout approaches:
 
-- changing and elements `display` property from `inline` to `block`
+- changing and elements `display` property from `inline` to `block` or `inline-block` or vice versa.
 - using the `float` or `position` property to take an element out of the document flow
 
-[Basics & Terminology Of Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+Here is an example of what floats are still used for: 
+- [Wrap Text Around An Image](https://codepen.io/jkeohan/pen/eepKXQ)
+
+Here is an example of what position can be used for:
+- [Food Sense](https://codepen.io/jkeohan/live/gEQqZW)
 
 #### Can I use flexbox?
 
@@ -57,12 +61,16 @@ In SEIR we are only worrying about modern browsers and won't be including vendor
 
 ### Flexbox is its own thing
 
-Flexbox is built with its own logic. Flexbox properties are more descriptive like `justify-content: space-between;` or `flex-direction: column;` with spacing and resizing being calculated under the hood.
+[Basics & Terminology Of Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
+Flexbox is built with its own logic. Flexbox properties are more descriptive like:
+-  `justify-content: space-between or space-around;` 
+- `flex-direction: column or row;` 
 
 Flexbox has just two types of elements, each of which have their own properties.
 
-- `flex container` - `parent`
-- `flex items` - `children`
+- `flex container` - parent
+- `flex items` - children
 
 #### Flexbox Axes
 
@@ -72,11 +80,14 @@ Flexbox is one dimensional in that it either applies to elements in a `row` or `
 
 #### Flexbox Playground
 
-During the lesson we will use [Flexbox Playground](https://codepen.io/jkeohan/live/zdKJOY) to explore the flexbox settings and their effect. 
+The best way to really convey the power of Flexbox is to toy around with a few settings using  [Flexbox Playground](https://codepen.io/jkeohan/live/zdKJOY).
 
-### Use Case for Flexbox
+### Use Cases for Flexbox
 
-One great use case for flexbox is a layout pattern that is often referred to as `cards`. Cards are often used to advertise services on a company web site or display products for an online shopping.
+A few good use cases for Flexbox are: 
+
+- layout pattern that is often referred to as `cards`. Cards are often used to advertise services on a company web site or display products for an online shopping.
+- navigation items
 
 <hr>
 
@@ -92,7 +103,7 @@ One site that represents a modern layout and is a beautifully desinged is [The K
 
 ### What We Are Building Today
 
-Below is our attempt at redesigning the services section of The Knot and what we will focus on building today. We will be using Flexbox to position the elements, define their widths as well as leverage wrapping to create the responsive design we need to implement. 
+Below is our attempt at redesigning the `services section` of The Knot and what we will focus on building today. We will be using Flexbox to position the elements, define their widths as well as leverage wrapping to create the responsive design we need to implement. 
 
 Here the desktop version is displayed as 2 rows and 4 columns.
 
