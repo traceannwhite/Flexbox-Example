@@ -173,7 +173,7 @@ Open `index.html` in your browser and it should look like below.
 #### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - 2min
 
 - Take a moment to examine the elements in DevTools
-- Determine what property is being used to center the elements contents
+- Determine what property is being used to center the content in the li's
 - When asked slack your response in a thread created by the instructor
 
 <hr>
