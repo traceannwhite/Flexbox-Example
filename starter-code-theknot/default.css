@@ -25,9 +25,8 @@ li .ItemHeading {
 }
 
 li.ItemContainer {
-    /* text-align:center; */
+    text-align:center;
 }
-
 
 .ListContainer a {
 	text-decoration: none;
