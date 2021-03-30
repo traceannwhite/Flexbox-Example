@@ -21,8 +21,8 @@ Prerequisites: HTML, CSS basics<br>
 By the end of this you should be able to:
 
 - Know when and where to apply flexbox
-- Work with several flexbox properties available to a flexbox container
-- Work with several flexbox properties are available to a flexbox child element
+- Work with several flexbox properties that available to a flexbox container
+- Work with several flexbox properties that are available to a flexbox child element
 - Implement a design using parent and child flexbox properties
 
 ## Intro
@@ -36,15 +36,21 @@ Flexbox was introduced as part of CSS3 and has been around since ~2008. Despite 
 
 Floats are now best used to: [Wrap Text Around An Image](https://codepen.io/jkeohan/pen/eepKXQ)
 
-Position can be used to: [Place Content Into A Specific Position(www.signesduquotidien.org)](https://www.signesduquotidien.org/)
+Position can be used to: 
+- [Place Content Into A Specific Position](https://www.signesduquotidien.org/)...[student version]([](https://72cef.csb.app/projects))
+- [Overlap content](https://codepen.io/jkeohan/full/qBRqWbq)
+
+
 
 #### Can I use flexbox?
 
-Flexbox has near universal support from all major modern browsers. You can find out what browsers support by going to [caniuse.com](http://caniuse.com/) , this website also documents support for just about anything else you might want to put in the browser, inclulding HTML and JavaScript.
+Flexbox has near universal support from all major modern browsers. You can find out what browsers support it by going to [caniuse.com](http://caniuse.com/).
 
 #### Vendor Prefixes
 
-At times **vendor prefixes** are required for flexbox and other css properties.  You can determine if a specific properrty requires a prefix by going to [shouldiprefix](http://shouldiprefix.com/):
+At times **vendor prefixes** are required for flexbox and other css properties to work across different browsers.  
+
+You can determine if a specific properrty requires a prefix by going to [shouldiprefix](http://shouldiprefix.com/):
 
 ```
 .page-wrap {
@@ -59,8 +65,8 @@ In SEIR we will only build site for the Chrome browser and won't worry ourselves
 
 ### Flexbox is its own thing
 
-Flexbox is built with its own logic and its properties:values are much more descriptive such as: 
--  **justify-content: space-between or space-around** 
+Flexbox is built with its own logic and descriptive **properties:values** such as: 
+-  **align-items: center** 
 - **flex-direction: column or row** 
 
 Flexbox targets two types of elements:
@@ -72,7 +78,7 @@ Flexbox targets two types of elements:
 
 #### Flexbox Axes
 
-Flexbox is one dimensional in that it either applies to elements in a **row** or **column**.  
+Flexbox is **one dimensional** in that it either applies to elements in a **row** or **column**.  
 
 <img src="https://i.imgur.com/dEnifVE.png" width=500/>
 
@@ -92,8 +98,9 @@ The best way to really convey the power of Flexbox is to toy around with a few s
 
 A few good use cases for Flexbox are: 
 
-- layout patterns often associated with **cards**. Cards are often used to advertise services on a company web site or display products for an online shopping.
-- navigation items
+- navigation menu items
+- layout patterns often associated with cards
+
 
 <hr>
 
@@ -101,16 +108,30 @@ A few good use cases for Flexbox are:
 
 One site that represents a modern layout and is a beautifully desinged is [The Knot](https://www.theknot.com/).
 
-Let's take a look at two sections highlighted in red that are positioned using flexbox
+Let's take a look at the top nav element and see if we can find where flexbox is being implemented. 
 
-<img src="https://i.imgur.com/tpJe9lz.jpg" width=500/>
+<img src="https://i.imgur.com/W97xLdE.png" width=500/>
+
+If we open the site in DevTools and inspect the **nav** we will find that there are several places where flexbox is being applied.
+
+<img src="https://i.imgur.com/5CLL4qk.png" width=600/>
+
+
+<img src="https://i.imgur.com/M8tNVMc.png" width=600/>
+
+<img src="https://i.imgur.com/cOsyEXh.png" width=600/>
+
+
 
 
 <hr>
 
 #### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - You Do - 3min
 
-Examine the following [Mars](https://02nz9.csb.app/) site (remake of the original one) and locate where flexbox is being applied. 
+Examine the following [student portfolio site](https://www.brandoncantello.com/) and  see if you can locate flexbox is being applied. 
+
+<!-- Examine the following [Mars](https://02nz9.csb.app/) site (remake of the original one) and locate where flexbox is being applied in the nav. -->
+
 
 Post your findings in the slack thread when asked by the instructor. 
 
@@ -131,7 +152,7 @@ Here is the desktop version we will build displayed as 2 rows and 4 columns.
 
 <img src="https://i.imgur.com/WJgWKuE.png" width=600/>
 
-Of course we also need to build it with responsiveness in mind:
+Of course we also need to keep responsiveness in mind and create a design that works for mobile, tablet and desktop.
 
 <img src="https://i.imgur.com/TRX3MrM.png" width=700/>
 
@@ -143,7 +164,7 @@ Of course we also need to build it with responsiveness in mind:
 
 #### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - 2min
 
-Navigate to the **starter-code-theknot** directory where you will find the following files:
+Open the **starter-code-theknot** directory in VSCode.  Here you will find the following files:
 - **index.html** 
 - **default.css** 
 - **main.css** - this is the **ONLY** file that you will be coding in for this morning's exercise
@@ -163,7 +184,7 @@ In the **head** we will see some additional css being imported for [Font Awesome
 ```
 
 ##### Main.css
-For this lesson we will only be editing **main.css.** however you are encouraged to examine the **default.css** file as it contains additional settings being applied to the desing.
+For this lesson we will only be editing **main.css.** however you are encouraged to examine the **default.css** file as it contains additional settings being applied to the design.
 
 ```html
 <!-- OUR CSS -->
@@ -194,7 +215,7 @@ The **.ListContainer** section contains the **nav > ul > li** elements that make
 
 <hr>
 
-:question: What use case do you think justifies using a **nav** element as the parent for the ul? 
+:question: Why do you think a **nav** element was chosen as the parent for the ul? 
 
 <hr>
 
@@ -219,7 +240,7 @@ When asked slack your response in a thread created by the instructor
 
 HTML applies some default CSS which we can clearly see being represented here as the **dot** and spacing between the elements. 
 
-There are times when front end devs want to start with a clean slate and so they have to manually add CSS that removes the defaults being applied. 
+There are times when we want to begin our design with a clean slate.  This requires that we add additional CSS to remove the default CSS being applied. 
 
 Lucky for us there is a css library that does that for us already, it's called **reset.css** and will add that to our **head**
 
@@ -248,7 +269,7 @@ Hmmm...why didn't that apply? Any ideas?...
 
 <hr>
 
-#### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - 5min
+#### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - 2min
 
 - Take a moment to examine the elements in **DevTools**
 - Review both the **Styles** and **Computed** tabs and see if they provide any insight.
@@ -259,7 +280,7 @@ When asked slack your response in a thread created by the instructor
 
 #### The !important Flag
 
-So we've determined that adding **reset.css** has applied styles that override the wild card settings. We can fix this by adding the **!important** flag to make this setting  so that it take precedence.
+So we've determined that adding **reset.css** applies styles that override the wild card settings. We can fix this by adding the **!important** flag to give this the highest precedence. 
 
 ```css
 * {
@@ -282,9 +303,9 @@ nav.ListContainer {
 
 ### Adding Flexbox
 
-You have already been exposed to the display property and that elements are assigned a default value of either **inline** or **block** by default. 
+You have already been exposed to the display property and that elements are assigned a default value of either **block**, **inline** or **inline-block** by default. 
 
-Another value that we can assign to the display property is **flex**.
+In order to work with flexbox we need to manually assign the elements display property is **flex**.
 
 The main properties that are specific to the to the **flex** parent are:
 
@@ -369,7 +390,7 @@ If we include **flex-shrink** and **flex-basis** we can get closer to the design
 
 ```css
 li.ItemContainer {
-	flex: 1 0 185px;
+  flex: 1 0 185px;
 }
 ```
 
@@ -405,7 +426,7 @@ Since we have removed that boundary they are now much closer.
 
 #### Margin or Padding
 
-So let's create space between the elements on all sides. Margin is usually the way to go when elements want to push away from something so let's try adding margin to the top,bottom, left and right of the element. 
+So let's create space between the elements on all sides. Margin is usually the way to go when elements want to create distance adjacent elements so let's try adding margin to all sides of the element.
 
 ```css
 li.ItemContainer {
@@ -417,7 +438,7 @@ li.ItemContainer {
 
 <img src="https://i.imgur.com/XPyMklL.png" width=500/>
 
-Although this creates space wanted we no longer have the items display in 2 rows with 4 elements per row. That is because margin adds to the space occupied by the element and flexbox doesn't take margin into consideration.
+Although this creates space wanted we no longer have the items display in 2 rows with 4 elements per row. That is because margin adds to the space occupied by the element and flexbox doesn't take margin into consideration when assigning the free space. 
 
 Another option to create the illusion of space is replace margin with padding.
 
@@ -449,7 +470,7 @@ And that completes the design
 
 ### Bonus: Reordering Elements
 
-There might be a need one day to rearrange the elements in a different order.  Flexbox provides the **order** property for just that reason.  
+There might be a need one day to rearrange the elements in a different order.  Flexbox provides the **order** property to accomplish just that.  
 
 Let's move **Wedding Vision** element to the end.  
 
