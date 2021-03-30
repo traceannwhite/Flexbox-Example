@@ -98,13 +98,16 @@ The best way to really convey the power of Flexbox is to toy around with a few s
 
 A few good use cases for Flexbox are: 
 
-- navigation menu items
-- layout patterns often associated with cards
+- [layout patterns often associated with cards](https://codepen.io/jkeohan/pen/ZELBYEo?editors=1100)
+- [positioning the dots on dice](https://codepen.io/LandonSchropp/pen/KpzzGo)
+- [calculator buttons](https://codepen.io/jkeohan/pen/LjGxQj?editors=0110)
 
 
 <hr>
 
 #### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - We Do -  2min
+
+Another good use case for flexbox is navigation and nav items.  
 
 One site that represents a modern layout and is a beautifully desinged is [The Knot](https://www.theknot.com/).
 
@@ -499,3 +502,9 @@ Let's now move **Wedding Websites** to the end as well.  For that we need to tar
 
 - [Basics & Terminology Of Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - [The Most Popular Nav Bars Created With Flexbox](https://medium.com/flexbox-and-grids/the-most-popular-navigation-bars-created-with-flexbox-6c0f59f55686)
+
+### Additional Exercises
+
+- [Cards](https://codepen.io/jkeohan/pen/GRJWQoB?editors=1000)
+- [Flexbox Defense](http://www.flexboxdefense.com/)
+- [Flexbox Zombies](https://flexboxzombies.com/p/flexbox-zombies)
