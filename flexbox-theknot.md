@@ -502,6 +502,7 @@ Let's now move **Wedding Websites** to the end as well.  For that we need to tar
 
 - [Basics & Terminology Of Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - [The Most Popular Nav Bars Created With Flexbox](https://medium.com/flexbox-and-grids/the-most-popular-navigation-bars-created-with-flexbox-6c0f59f55686)
+- [CSS Flexbox Generator](https://www.cssportal.com/css-flexbox-generator/)
 
 ### Additional Exercises
 
