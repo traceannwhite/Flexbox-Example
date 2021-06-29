@@ -14,7 +14,7 @@ Prerequisites: HTML, CSS basics<br>
 
 ## Prerequisites
 
-- Familiarity with display property values such as: block, inline, inline-block
+- Basic familiarity with display property values such as: block, inline, inline-block
 
 ## Objectives
 
@@ -107,9 +107,7 @@ A few good use cases for Flexbox are:
 
 #### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - We Do -  2min
 
-Another good use case for flexbox is navigation and nav items.  
-
-One site that represents a modern layout and is a beautifully desinged is [The Knot](https://www.theknot.com/).
+Another good use case for flexbox is navigation and nav items.  One site that represents a modern layout and is a beautifully desinged is [The Knot](https://www.theknot.com/).
 
 Let's take a look at the top nav element and see if we can find where flexbox is being implemented. 
 
@@ -131,7 +129,9 @@ If we open the site in DevTools and inspect the **nav** we will find that there 
 
 #### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - You Do - 3min
 
-Examine the following [student portfolio site](https://www.brandoncantello.com/) and  see if you can locate flexbox is being applied. 
+Examine the following [student portfolio site](https://www.brandoncantello.com/) and  see if you can locate where flexbox is being applied. 
+
+**Hint**: start by examining the nav
 
 <!-- Examine the following [Mars](https://02nz9.csb.app/) site (remake of the original one) and locate where flexbox is being applied in the nav. -->
 
@@ -147,7 +147,7 @@ Post your findings in the slack thread when asked by the instructor.
 
 Below is an attempt at redesigning the **services section** of The Knot, located at the bottom of the site.  
 
-<img src="https://i.imgur.com/cFqzpzh.png" width=500/>
+<img src="https://i.imgur.com/cFqzpzh.png" width=700/>
 
 We will be using **Flexbox** to position the elements, define their widths and leverage **flex-wrap** to wrap elements dynamically. 
 
