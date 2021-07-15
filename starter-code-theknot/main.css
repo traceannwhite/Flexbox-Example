@@ -1,0 +1,27 @@
+* {
+  /* border: 1px solid !important; */
+}
+
+nav.ListContainer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* turn on flexbox */
+nav.ListContainer ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+li.ItemContainer {
+  flex: 1 0 185px;
+  max-width: 185px;
+  padding: 20px;
+}
+
+/*FOR MOVING THE LIST ITEMS TO A DIFF ORDER */
+.ListContainer li:nth-of-type(1) {
+  order: 1;
+}
